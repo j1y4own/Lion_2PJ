@@ -12,14 +12,28 @@
     font-style: normal;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body{
     background: src("{% static 'img/bar1.jpeg' %}");
-} 
+}
+
+.hr1{
+    border: solid 3px #45312b;
+}
 
 .anchor{
     background-color:rgba(210, 105, 30, 0.525)
 }
 
+.box{
+    align-items: center;
+}
 ul{
     font-family: 'KOTRALEAP';
     font-style:italic;
@@ -38,9 +52,9 @@ h1{
 }
 
 .columbus{
-    width: 90vw;
-    height: 400px;
-    background-color:rgba(209, 182, 142, 0.675);
+    width: 60vw;
+    height: 30vh;
+    background-color:#141313;
     margin: 30px;
     padding: 10px;
     font-size: 20px;
@@ -67,9 +81,9 @@ h3{
 }
 
 .arslonga{
-    width: 90vw;
-    height: 400px;
-    background-color:rgba(209, 182, 142, 0.675);
+    width: 60vw;
+    height: 30vh;
+    background-color:#141313;
     margin: 30px;
     padding: 10px;
     font-size: 20px;
@@ -83,9 +97,9 @@ h3{
 }
 
 .cestsibon{
-    width: 90vw;
-    height: 400px;
-    background-color:rgba(209, 182, 142, 0.675);
+    width: 60vw;
+    height: 30vh;
+    background-color:#141313;
     margin: 30px;
     padding: 10px;
     font-size: 20px;
