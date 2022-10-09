@@ -1,5 +1,6 @@
-<form method = "POST" action="{% url 'signup' %}">
+<form method = "POST" action="{% url 'signup' %}" style="color: black;">
     {% csrf_token %}
     {{ form.as_p }}
+    <br>
     <button type="submit">가입</button>
 </form>

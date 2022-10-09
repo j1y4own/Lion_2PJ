@@ -1,4 +1,6 @@
 {% load static %}
+{% block css %}
+{% endblock css %}
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -17,10 +19,27 @@
         
 </head>
 <body>
-    <br>
-    <hr style="border: 7px solid #45312b">
-    <br>
-    <br>
+
+    <nav class="p-3 mb-3 border-bottom navbar navbar-expand-lg navbar-light bg-light fixed-top text-uppercase">
+        <div class="container">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+                <img src="" class="logo_style" alt="이미지 준비중"></a>
+            </a>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
+                aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" style="text-align: right; font-weight: bold;" id="navbarsExample07">
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 ">
+                    <li><a href="{% url 'main' %}" style="color:#56b198" class="nav-link px-2 ">main</a></li>
+                    <li><a href="{% url 'read' %}" class="nav-link px-2 link-dark">read</a></li>
+            </div>
+        </div>
+    </nav>
+    
+    
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -133,6 +152,28 @@
     </div>
     <script src="{% static 'js/main.js' %}"></script>
 </body>
-<footer>Copyright&copy; 성공회대학교 멋쟁이사자처럼 10기 아기사자 전지윤</footer>
+<footer class="footer text-center">
+    <div class="container" style="margin-bottom: 20px;">
+        <div class="row">
+            <!-- logo & copyright-->
+            <div class="col-lg-4">
+                <small>성공회대학교 멋쟁이 사자처럼 10기</small><br>
+                <small>Copyright &copy; LOUNGE 2022</small><br>
+                <small>전지윤 전천우</small><br><br><br>
+
+            </div>
+            <!-- contact -->
+            <div class="col-lg-4">
+                <h4 class="text-uppercase mb-3 nav-main-font">Contact</h4>
+
+                <small>✉️ missji1004@gmail.com</small><br> <small>📞
+                    010-1234-1234</small>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</footer>
+
 
 </html>

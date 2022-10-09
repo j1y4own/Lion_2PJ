@@ -1,0 +1,22 @@
+.form{
+    background-color:#141313;
+}
+.hide{
+    display: none;
+}
+
+.failure-message,
+.mismatch-message,
+.misnumber-message {
+    color: red;
+}
+
+.success-message,
+.match-message {
+    color: blue;
+}
+
+.style01,
+.style1{
+    color: grey;
+}

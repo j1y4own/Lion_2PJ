@@ -13,8 +13,6 @@
 }
 
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -112,7 +110,11 @@ h3{
     height: 300px;
 }
 
-footer{
-    color: white;
-    text-align: right;
+.footer{
+    background-color:#141313;
+    color:white;
+    padding-top: 100px;
+    padding-bottom: 50px !important;
+    align-items: left;
+    text-align: left;
 }

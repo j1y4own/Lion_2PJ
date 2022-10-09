@@ -1,19 +1,61 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% block css %}
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>나만의 가계부 만들기</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/read.css' %}">
+    <title>로그인</title>
+    {% endblock css %}
+    <style>
+        *{
+        background-color: white;
+            }
+    </style>
 </head>
 <body>
-    <h2>Read</h2>
-    <form method="post">
-        {% for cashbooks in cashbooks.all %}
-        <h3>제목 : <a href="{% url 'detail' cashbooks.id %}">{{cashbooks.title}}</a></h3>
-        <p>작성일: {{cashbooks.created_at}}</p>
-        {% endfor %}
-    </form>
-    
+    <h1 style="color:#994949;">회원가입</h1>
+    <hr>
+    <div class="form">
+        <form>
+            <fieldset style="border:none;">
+                <label>이름</label>
+                <input type="text">
+            </fieldset>
+
+            <fieldset style="border:none;">
+                <label>아이디(4자 이상)</label>
+                <input type="text" id="username">
+                <div class="failure-message hide">아이디는 네 글자 이상이어야 합니다.</div>
+                <div class="success-message hide">사용할 수 있는 아이디입니다.</div>
+            </fieldset>
+
+            <fieldset style="border:none;">
+                <label>비밀번호</label>
+                <input type="password" id="password">
+                <div class="style0">* 비밀번호는 문자, 숫자, 특수문자로 구성하여 입력하세요 *</div>
+            </fieldset>
+
+            <fieldset style="border:none;">
+                <label>비밀번호 확인</label>
+                <input type="password" id="password-retype">
+                <div class="mismatch-message hide">두 비밀번호가 일치하지 않습니다.</div>
+                <div class="match-message hide">두 비밀번호가 일치합니다.</div>
+            </fieldset>
+
+            <fieldset style="border:none;">
+                <label>전화번호</label>
+                <input type="text" id="phonenumber">
+                <div class="style1">* 전화번호는 "-"를 제외한 숫자만 입력하세요 *</div>
+                <div class="misnumber-message hide">숫자를 입력해주세요</div>
+            </fieldset>
+
+            <fieldset style="border:none;">
+                <button id="joinbutton" style="background-color:black; border:none; border-radius: 5px; padding: 5px; color: #994949; font-weight: 600;">SIGN UP</button>
+            </fieldset>
+        </form>
+    </div>
+    <script src="{% static 'js/read.js' %}"></script>
 </body>
 </html>
